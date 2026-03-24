@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CPU Scheduler</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-dark text-light">
+
+<div class="container mt-5">
+<div class="card p-4 bg-secondary">
+
+<h1 class="text-center">⚙️ CPU Scheduler</h1>
+
+<form method="post" action="/calculate/">
+{% csrf_token %}
+
+<div class="row text-dark">
+
+<div class="col-md-4">
+<div class="card p-3">
+<h5>Process 1</h5>
+<input type="number" name="arrival" class="form-control mb-2" placeholder="Arrival">
+<input type="number" name="burst" class="form-control" placeholder="Burst">
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card p-3">
+<h5>Process 2</h5>
+<input type="number" name="arrival" class="form-control mb-2">
+<input type="number" name="burst" class="form-control">
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card p-3">
+<h5>Process 3</h5>
+<input type="number" name="arrival" class="form-control mb-2">
+<input type="number" name="burst" class="form-control">
+</div>
+</div>
+
+</div>
+
+<br>
+<input type="number" name="quantum" class="form-control w-25 mx-auto" placeholder="Time Quantum">
+
+<br>
+
+<div class="text-center">
+<button class="btn btn-warning">Compare</button>
+<button type="reset" class="btn btn-danger">Clear</button>
+<a href="/history/" class="btn btn-info">History</a>
+</div>
+
+</form>
+
+</div>
+</div>
+
+</body>
+</html>

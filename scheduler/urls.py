@@ -1,0 +1,9 @@
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.home),
+    path('calculate/', views.calculate),
+    path('history/', views.history),
+    path('clear-history/', views.clear_history),
+]

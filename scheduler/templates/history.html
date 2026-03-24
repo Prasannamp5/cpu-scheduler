@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>History</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-dark text-light">
+
+<div class="container mt-5">
+
+<h1 class="text-center">📜 History</h1>
+
+<table class="table table-dark table-bordered">
+<tr>
+<th>Arrival</th>
+<th>Burst</th>
+<th>Quantum</th>
+<th>FCFS</th>
+<th>SJF</th>
+<th>RR</th>
+<th>Best</th>
+</tr>
+
+{% for h in data %}
+<tr>
+<td>{{h.arrival}}</td>
+<td>{{h.burst}}</td>
+<td>{{h.quantum}}</td>
+<td>{{h.fcfs_avg}}</td>
+<td>{{h.sjf_avg}}</td>
+<td>{{h.rr_avg}}</td>
+<td>{{h.best_algo}}</td>
+</tr>
+{% endfor %}
+</table>
+
+<div class="text-center">
+<a href="/clear-history/" class="btn btn-danger">Clear History</a>
+<a href="/" class="btn btn-light">Back</a>
+</div>
+
+</div>
+
+</body>
+</html>
