@@ -1,0 +1,1 @@
+web: gunicorn scheduler_project.wsgi
